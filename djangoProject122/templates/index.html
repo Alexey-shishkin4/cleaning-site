@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Title</title>
+</head>
+<body class = "body">
+  <div class = "navigation"></div>
+  <div>
+      <div class = "navigation-container">
+          <a href="/" aria-current="page" class="logo w-inlinte-block"></a>
+      </div>
+  </div>
+  <div class="header">
+      <div class="header-content">
+          <h1 class="main-h1">Уборка квартир</h1>
+          <p class="main-p">Профессиональная уборка квартир и загородных домов безопасными средствами для защиты вашего дома</p>
+          <a href="/order" class="button w-button">Рассчитать стоимость</a>
+      </div>
+  </div>
+
+<div class="features">
+    <div class="container">
+        <div class="h2-container">
+            <h2 class="feature-h2">Как мы работаем<br></h2>
+        </div>
+        <div class="collection-list-wrapper w-dyn-list">
+            <div role="list" class="collection-list w-dyn-item">
+                <div role="listitem" class="collection-item w-dyn-item">
+                    <div class="feature-item-container"><img class="feature-img" src="{% static 'mini-4.png' %}" alt="">
+                      <div class="feature_icon"></div>
+                      <h3 class="h3 w-dyn-bind-empty">Надежные и проверенные исполнители</h3>
+                      <p class="feature-p">Мы гордимся нашими клинерами, а они гордятся тем, что работают в нашей компании.</p>
+                    </div>
+                </div>
+                <div role="listitem" class="collection-item w-dyn-item">
+                    <div class="feature-item-container"><img class="feature-img" src="{% static 'mini-2.png' %}" alt="">
+                      <div class="feature_icon"></div>
+                      <h3 class="h3 w-dyn-bind-empty">Надежные и проверенные исполнители</h3>
+                      <p class="feature-p">Мы гордимся нашими клинерами, а они гордятся тем, что работают в нашей компании.</p>
+                    </div>
+                </div>
+                <div role="listitem" class="collection-item w-dyn-item">
+                    <div class="feature-item-container"><img class="feature-img" src="{% static 'mini-3.png' %}" alt="">
+                      <div class="feature_icon"></div>
+                      <h3 class="h3 w-dyn-bind-empty">Надежные и проверенные исполнители</h3>
+                      <p class="feature-p">Мы гордимся нашими клинерами, а они гордятся тем, что работают в нашей компании.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service">
+    <div class="service-block block-first">
+        <div class="service-text-1">
+            <div class="service-text">
+                <h3 class="service-h3">Услуги</h3>
+                <h2 class="service-h">Стандартная уборка</h2>
+                <p class="service-p">Клинер приезжает в назначенное время со всем необходимым и приступает к уборке. Вам остаётся только оценить результат. В стоимость входит сухая и влажная уборка всех внешних поверхностей, на кухне, в комнатах и санузлах.</p>
+            </div>
+        </div>
+        <div class="service-image1">
+            <img src="{% static 'image1.jpg' %}" alt="Стандартная уборка">
+        </div>
+    </div>
+
+    <div class="service-block">
+        <div class="service-image1">
+            <img src="{% static 'image2.jpg' %}" alt="Генеральная уборка">
+        </div>
+        <div class="service-text-1">
+            <div class="service-text">
+                <h3 class="service-h3">Услуги</h3>
+                <h2 class="service-h">Генеральная уборка</h2>
+                <p class="service-p">Если в квартире очень грязно, к вам приедет команда клинеров с техникой и стремянкой. В стоимость входит интенсивная уборка всех внешних и внутренних поверхностей, техники на кухне, в комнатах и санузлах. Привозим пылесос.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-block block-first">
+        <div class="service-text-1">
+            <div class="service-text">
+                <h3 class="service-h3">Услуги</h3>
+                <h2 class="service-h">Уборка после ремонта</h2>
+                <p class="service-p">Все знают, что после ремонта остаётся ужасный мусор и пыль по всей квартире. В стоимость уборки после ремонта входит обеспыливание и удаление следов ремонта со всех внешних и внутренних поверхностей. Привозим необходимое оборудование.</p>
+            </div>
+        </div>
+        <div class="service-image1">
+            <img src="{% static 'image3.jpg' %}" alt="Решения для бизнеса">
+        </div>
+    </div>
+</div>
+
+<section class="section">
+    <h2 class="main-h1">Отзывы</h2>
+    <div class="reviews-container">
+        <div class="review">
+            <img class="review-img" src="{% static 'user-icon.png' %}">
+            <p class="review-p">Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текст Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текстХороший отзыв. Все понравилось. Пример Отзыва.</p>
+            <p class="review-p">Имя Фамилия</p>
+        </div>
+        <div class="review">
+            <img class="review-img" src="{% static 'user-icon.png' %}">
+            <p class="review-p">Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текст Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текстХороший отзыв. Все понравилось. Пример Отзыва.</p>
+            <p class="review-p">Имя Фамилия</p>
+        </div>
+        <div class="review">
+            <img class="review-img" src="{% static 'user-icon.png' %}">
+            <p class="review-p">Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текст Хороший отзыв. Все понравилось. Пример Отзыва. Текст Текст текстХороший отзыв. Все понравилось. Пример Отзыва.</p>
+            <p class="review-p">Имя Фамилия</p>
+        </div>
+    </div>
+</section>
+
+<h2 class="main-h1">Вопросы и ответы</h2>
+
+<div class="faq-content">
+  <div class="faq-question">
+    <input id="q1" type="checkbox" class="panel">
+    <div class="plus">+</div>
+    <label for="q1" class="panel-title">Мне нужно быть дома во время уборки?</label>
+    <div class="panel-content">Вам совсем не обязательно быть дома, наш клинер позвонит вам за час до конца уборки и пригласит принимать работу. Если вы торопитесь, то ключи можно оставить клинеру, так же мы можем доставить ключи к вам. Это все опционально и зависит от ваших личных пожеланий.</div>
+  </div>
+
+  <div class="faq-question">
+    <input id="q2" type="checkbox" class="panel">
+    <div class="plus">+</div>
+    <label for="q2" class="panel-title">А что если клинер что-то сломает?</label>
+    <div class="panel-content">Мы заботимся о том, чтобы вы получали только положительные эмоции от покупок на нашем сайте. Вы можете оплатить заказ любым удобным способом и тогда, когда вы считаете нужным: на сайте при оформлении заказа или наличными и картой при получении заказа.</div>
+  </div>
+
+  <div class="faq-question">
+    <input id="q3" type="checkbox" class="panel">
+    <div class="plus">+</div>
+    <label for="q3" class="panel-title">Кто у вас работает?</label>
+    <div class="panel-content">Мы заботимся о том, чтобы вы получали только положительные эмоции от покупок на нашем сайте. Вы можете оплатить заказ любым удобным способом и тогда, когда вы считаете нужным: на сайте при оформлении заказа или наличными и картой при получении заказа.</div>
+  </div>
+</div>
+
+<div class="cta">
+    <div class="container cc-cta">
+        <div class="cta-column">
+            <div class="cta-left-top">
+                <h3 class="h3 cc-cta">Клининг</h3>
+                <div class="cta-line"></div>
+            </div>
+            <h2 class="h2"><span class="text-span">Уборка квартир</span> Профессиональная уборка квартир и загородных домов безопасными средствами для защиты вашего дома</h2>
+            <h2 class="cta-h1">+7(123) 456-78-90</h2>
+            <h2 class="cta-h1">example@mail.ru</h2>
+        </div>
+        <div class="cta-column">
+            <a href="/order" class="button">Рассчитатть</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

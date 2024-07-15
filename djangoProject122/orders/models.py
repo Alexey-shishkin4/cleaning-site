@@ -6,7 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 class Orders(models.Model):
     service = models.ManyToManyField(Bb)
-    time = models.DateTimeField(null=True, blank=True)
+    time = models.DateField(null=True, blank=True)
 
     # пользователь
     name = models.CharField(max_length=100)

@@ -3,6 +3,8 @@ from django.template import loader
 from django.shortcuts import render
 from .models import Bb
 from .forms import OrderForm
+import datetime
+from whatsappbot import send_info
 
 
 def bb_index(request):
@@ -11,8 +13,21 @@ def bb_index(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             form.save()
-            data = form.cleaned_data['address']
-            print(data)
+            data = form.cleaned_data
+            answer = ""
+
+            answer += "Услуги: "
+            for i in data['service']:
+                answer += f'{i}, '
+            answer += f'\nЖелаемое время: {data["time"].strftime("%m/%d/%y")}'
+            answer += f'\nФИО: {data["name"]}'
+            answer += f'\nEmail: {data["email_address"]}'
+            answer += f'\nТелефон: {data["phone_number"]}'
+            answer += f'\nАдрес: {data["address"]}'
+            if data['comment']:
+                answer += f'\nКомментарий: {data["comment"]}'
+            send_info(str(answer))
+
             context = {'bbs': bbs, 'form': form}
             return HttpResponseRedirect('/success/')
     else:

@@ -1,7 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'logo.png' %}"/>
     <title>Успех</title>
 </head>
 <body>
@@ -22,7 +25,7 @@
     }
 </style>
     <h1>Форма заполнена успешно!</h1>
-    <p>какой-нибудь текст</p>
+    <p>с вами свяжутся для уточнения заказа</p>
     <a href="{% url 'index' %}">На главную</a>
 </body>
 </html>

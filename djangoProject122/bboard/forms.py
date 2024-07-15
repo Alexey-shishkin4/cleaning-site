@@ -13,8 +13,8 @@ class OrderForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple()
     )
 
-    time = forms.DateTimeField(
-        widget=forms.DateTimeInput(),
+    time = forms.DateField(
+        widget=forms.DateInput(),
         initial=datetime.datetime.now()
     )
 

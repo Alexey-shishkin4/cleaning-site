@@ -4,6 +4,8 @@
 <html lang="en">
     <head>
         <title>Заказ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="{% static 'logo.png' %}"/>
     </head>
     <body>
     <div class="header">
@@ -128,6 +130,12 @@
             font-family: "IBM Plex Mono", sans-serif;
             font-size: 16px;
         }
+        .errorlist {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            font-family: "IBM Plex Mono", sans-serif;
+            font-size: 16px;
+        }
         @media screen and (max-width: 991px) {
 
             .el-title {
@@ -162,7 +170,18 @@
                 height: 5%;
             }
             .form-p {
+                font-size: 25px;
+            }
+            .errorlist {
                 font-size: 20px;
+            }
+            .form-control {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+            .datetime-widget {
+                font-size: 20px;
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -172,22 +191,44 @@
         <div class="form-input">
             <div class="input-form2">
                 <p class="form-p">Дата и время</p>
-                {% render_field form.time type="datetime-local" class+="datetime-widget"%}
+                {% if form.time.errors %}
+                    {{ form.time.errors }}
+                {% endif %}
+                {% render_field form.time type="date" class+="datetime-widget"%}
                 <p class="form-p">ФИО</p>
+                {% if form.name.errors %}
+                    {{ form.name.errors }}
+                {% endif %}
                 {% render_field form.name placeholder="Имя Фамилия Отчество" class+="form-control" %}
                 <p class="form-p">Email</p>
+                {% if form.email_address.errors %}
+                    {{ form.email_address.errors }}
+                {% endif %}
                 {% render_field form.email_address placeholder="example@mail.ru" class+="form-control" %}
                 <p class="form-p">Телефон</p>
+                {% if form.phone_number.errors %}
+                    {{ form.phone_number.errors }}
+                {% endif %}
                 {% render_field form.phone_number placeholder="+7 (123) 456 78 90" class+="form-control" %}
                 <p class="form-p">Адрес</p>
-                 {% render_field form.address placeholder="Улица, дом, квартира" class+="form-control" %}
+                {% if form.address.errors %}
+                    {{ form.address.errors }}
+                {% endif %}
+                {% render_field form.address placeholder="Улица, дом, квартира" class+="form-control" %}
                 <p class="form-p">Комментарий</p>
-                 {% render_field form.comment placeholder="Комментарий" class+="form-control" %}
-                {{ form.errors }}
+                {% if form.comment.errors %}
+                    {{ form.comment.errors }}
+                {% endif %}
+                {% render_field form.comment placeholder="Комментарий" class+="form-control" %}
                 <input type="submit" value="Подтвердить" class="button">
             </div>
 
             <div class="form-checkbox">
+                {% if form.service.errors %}
+                    <ul class="errorlist">
+                        <li>Нужно выбрать хотя бы одну услугу</li>
+                    </ul>
+                {% endif %}
                 {% for field in bbs %}
                     <p class="el-title">{{ field.title }}</p>
                     <div class="checkbox-element">

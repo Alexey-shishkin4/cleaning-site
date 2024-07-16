@@ -37,7 +37,7 @@
         <div class="collection-list-wrapper w-dyn-list">
             <div role="list" class="collection-list w-dyn-item">
                 <div role="listitem" class="collection-item w-dyn-item">
-                    <div class="feature-item-container"><img class="feature-img img1" src="{% static 'mini-1.png' %}" alt="">
+                    <div class="feature-item-container"><img class="feature-img" src="{% static 'mini-1.png' %}" alt="">
                       <div class="feature_icon"></div>
                       <h3 class="h3 w-dyn-bind-empty">Приятные цены на услуги</h3>
                       <p class="feature-p">Вы платите приятную цену на все комнаты, дополнительно платить не придется</p>
@@ -128,16 +128,38 @@
 <style>
     .panel-title {
         font-size: 25px;
+        width: 90%;
     }
     .panel-content {
         font-size: 20px;
+        width: 90%;
     }
     @media screen and (max-width: 991px) {
         .panel-title {
-        font-size: 30px;
+        font-size: 25px;
     }
     .panel-content {
         font-size: 25px;
+    }
+    .service-p {
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .service-h {
+        line-height: 30px;
+        font-size: 30px;
+    }
+    .service-h3 {
+        font-size: 25px;
+    }
+    .faq-question {
+        padding: 20px 0;
+        border-bottom: 1px dotted #ccc;
+    }
+    .service-text-1 {
+        width: 100%;
+        padding-bottom: 15px;
+        margin-right: -5px;
     }
     }
 </style>

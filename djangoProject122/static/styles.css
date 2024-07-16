@@ -150,6 +150,7 @@ body {
 .faq-content {
     font-family: "Libre Franklin", sans-serif;
   margin: 0 auto;
+    overflow-x:hidden;
 }
 
 .faq-question {

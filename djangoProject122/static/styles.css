@@ -410,7 +410,7 @@ figcaption {
     background-size: cover;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 102%;
     padding-bottom: 210px;
     margin-left: -20px;
     margin-top: -8px;
@@ -1584,6 +1584,9 @@ figcaption {
 }
 
 @media screen and (max-width: 991px) {
+    .header {
+        margin-right: -30px;
+    }
     .nav-menu {
         display: none;
     }
